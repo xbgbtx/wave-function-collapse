@@ -1,0 +1,28 @@
+{
+  "id": "Wave Function Collapse",
+  "initial": "Edit",
+  "states": {
+    "Edit": {
+      "on": {
+        "StartSolve": {
+          "cond": "SettingsValid",
+          "target": "Solve"
+        }
+      }
+    },
+    "Solve": {
+      "on": {
+        "SolveComplete": {
+          "target": "Display"
+        }
+      }
+    },
+    "Display": {
+      "on": {
+        "Return": {
+          "target": "Edit"
+        }
+      }
+    }
+  }
+}
